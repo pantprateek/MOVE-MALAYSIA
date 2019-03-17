@@ -1,5 +1,5 @@
 /******************************************************************************scheduler.js**************************************************
- * This scheduler code invokes refresh token calls at the preset time************/
+ *** This scheduler code invokes refresh token calls at the preset time************/
 
 
 var schedule = require('node-schedule');
