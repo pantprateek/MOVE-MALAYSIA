@@ -1,5 +1,5 @@
 /***********************************************************************createdb.js*****************************************************************************
- * This is reponsible to create database table*/
+ ** This is reponsible to create database table*/
 
 
 var AWS = require("aws-sdk");
