@@ -2,7 +2,7 @@
  * This code has services to access Fitbit data of the users who have given their consent by signing through our url.When user access the url ,user is redirected to
  * Fitbit login and consent page .Once user gives consent ,user profile and access Tokens are stored  in Dynamo Db.We have several services here to fetch Fitbit data
  * like steps,sleep,activities . Tokens gets auto refreshed every day before it expires by scheduler.js which runs a schedule to refresh tokens .Therefore user doesnt
- * have to login again*/
+ * have to login again***/
 
 'use strict';
 var express = require('express');
