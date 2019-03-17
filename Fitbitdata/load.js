@@ -1,4 +1,4 @@
-/**This code accesses dynamo DB table and stores & updates Fitbit users profile data */
+/****This code accesses dynamo DB table and stores & updates Fitbit users profile data */
 
 var AWS = require("aws-sdk");
 //var fs = require('fs');
