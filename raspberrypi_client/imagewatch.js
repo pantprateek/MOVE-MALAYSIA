@@ -1,5 +1,5 @@
 
-/*************************************************************imagewatch.js******************************************************************
+/************************************************************imagewatch.js******************************************************************
 *This is the client code which sends image to server for face recognition once the person is detected and launches lex and polly clents*******/
 
 const fs = require('fs');
