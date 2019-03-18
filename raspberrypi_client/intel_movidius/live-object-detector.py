@@ -25,7 +25,7 @@ ARGS                 = None
 # OpenCV object for video capture
 camera               = None
 
-# ---- Step 1: Open the enumerated device and get a handle to it -------------
+# --- Step 1: Open the enumerated device and get a handle to it -------------
 
 cropped      = None
 
