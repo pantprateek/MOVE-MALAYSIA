@@ -1,9 +1,15 @@
 # ASTRO-MOVE
 
-# On Server : 
-forever start scheduler.js
+# On Server execute following : 
+
+# newfacecom.js : analyzes live image with reference images using Rekognition service .
 forever start newfacecom.js
-forever start fitbit.js
+
+# fitbit.js : (1)Stores updates Fitbit user's profile after getting consent (2) Provides Fitbit data to lambda api to Lex and Polly Client running in Raspberry Pi.
+forever start fitbit.js 
+
+# scheduler.js: refreshes access token before 8 hours of expiration ,so user doesnt have to login again .
+forever start scheduler.js
 
 # On Raspberry PI Client :
 forever start imagewatch.js 
@@ -62,10 +68,14 @@ REPORT RequestId: 9d5e634e-0ee7-4bc3-b0f6-ef441af6faa5	Duration: 1212.71 ms	Bill
 # RaspBerry PI Client :
 
 To execute polly client Format is :
-'node ./polly.js --text="Cannot identify the individual"'
+'node ./polly.js --text="Good Evening"'
 
 To execute lex client :
 node /home/pi/lex/lextest/lex.js
 
 lex.js uses sox utility to detect silence after speech utterance and completes the sentence ,after that text is posted to Lex Server.
 Preconditions : ALSA and Pulse Audio should be installed to use SOX .
+
+# live-object-dectector.py:
+Uses Opencv application and gets inference from Intel Movidius on person detection .Then image is immediatedly captured by Opencv application and sent for analysis.
+
