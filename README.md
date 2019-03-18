@@ -2,16 +2,19 @@
 
 # On Server execute following : 
 
-# newfacecom.js : analyzes live image with reference images using Rekognition service .
+newfacecom.js : analyzes live image with reference images using Rekognition service .
+
 forever start newfacecom.js
 
-# fitbit.js : (1)Stores updates Fitbit user's profile after getting consent (2) Provides Fitbit data to lambda api to Lex and Polly Client running in Raspberry Pi.
+fitbit.js : (1)Stores updates Fitbit user's profile after getting consent (2) Provides Fitbit data to lambda api to Lex and Polly Client running in Raspberry Pi.
+
 forever start fitbit.js 
 
-# scheduler.js: refreshes access token before 8 hours of expiration ,so user doesnt have to login again .
+scheduler.js: refreshes access token before 8 hours of expiration ,so user doesnt have to login again .
 forever start scheduler.js
 
 # On Raspberry PI Client :
+
 forever start imagewatch.js 
 
 This script watches for any image change on /tmp/live.jpg and uploads it for face comaprison to the server. On successful person recognition calls polly client to greet the user and launches chatbot which uses lex client .Now user can interact and talk to Lex server
